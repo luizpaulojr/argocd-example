@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: app-1
 spec:
-  replicas: 4
+  replicas: 6
   revisionHistoryLimit: 3
   selector:
     matchLabels:
