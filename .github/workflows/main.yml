@@ -9,7 +9,7 @@ jobs:
       - name: Run a one-line script
         run: echo Hello, world!
         
-    deploy-dev:
+  deploy-dev:
     runs-on: ubuntu-latest
     environment:
       name: DEV
@@ -19,7 +19,7 @@ jobs:
       - name: Run a one-line script
         run: echo Deploy Dev!
         
-    deploy-prd:
+  deploy-prd:
     runs-on: ubuntu-latest
     environment:
       name: PRD
