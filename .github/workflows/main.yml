@@ -1,0 +1,30 @@
+name: Demo
+on: 
+  workflow_dispacth:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Run a one-line script
+        run: echo Hello, world!
+        
+    deploy-dev:
+    runs-on: ubuntu-latest
+    environment:
+      name: DEV
+      url: "testeluiz.com"
+    needs: build
+    steps:
+      - name: Run a one-line script
+        run: echo Deploy Dev!
+        
+    deploy-prd:
+    runs-on: ubuntu-latest
+    environment:
+      name: PRD
+      url: "testeluiz.com"
+    needs: deploy-dev
+    steps:
+      - name: Run a one-line script
+        run: echo Deploy PRD!
